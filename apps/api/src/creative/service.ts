@@ -330,9 +330,16 @@ export class CreativeService {
   async getGeneration(projectId: string, generationId: string) { const project = await this.get(projectId); const generation = project.generations.find((item) => item.id === generationId); if (!generation) throw new DomainError("Video generation not found.", "GENERATION_NOT_FOUND", 404); return generation; }
   async pollGeneration(generation: VideoGeneration) {
     if (!generation.upstreamJobId || terminal.has(generation.status) || this.polling.has(generation.id)) return;
-    if (generation.submittedAt && Date.now() - Date.parse(generation.submittedAt) > this.config.creative.pollLifetimeMs) { await this.applyPoll(generation, { id: generation.upstreamJobId, status: "expired", outputs: 0, error: { code: "POLLING_WINDOW_EXPIRED", message: "The bounded local polling window elapsed. A new paid generation was not submitted." } }); return; }
+    if (generation.submittedAt && Date.now() - Date.parse(generation.submittedAt) > this.config.creative.pollLifetimeMs) { await this.applyPoll(generation, { id: generation.upstreamJobId, status: "expired", outputs: 0, error: generation.lastPollError ? { code: "POLLING_WINDOW_EXPIRED", message: `Polling stopped after repeated errors (last: ${generation.lastPollError.code}: ${generation.lastPollError.message})`.slice(0, 240) } : { code: "POLLING_WINDOW_EXPIRED", message: "The bounded local polling window elapsed. A new paid generation was not submitted." } }); return; }
     this.polling.add(generation.id);
-    try { const result = await this.video.getVideoJob(generation.upstreamJobId); if (result.status === "completed" && result.outputs > 0) await this.persistCompletedOutput(generation); await this.applyPoll(generation, result); } catch { await this.repository.updateProject(generation.projectId, (project) => ({ ...project, generations: project.generations.map((item) => item.id === generation.id ? { ...item, lastPolledAt: iso() } : item), updatedAt: iso() })); } finally { this.polling.delete(generation.id); }
+    try { const result = await this.video.getVideoJob(generation.upstreamJobId); if (result.status === "completed" && result.outputs > 0) await this.persistCompletedOutput(generation); await this.applyPoll(generation, result); } catch (error) {
+      // Keep polling (never resubmit a paid job), but record why this poll or download failed so a
+      // stuck shot no longer looks like a silent "failed" once the polling window expires.
+      const failure = error as { code?: string; message?: string };
+      const lastPollError = { code: failure.code ?? "POLL_FAILED", message: (failure.message ?? "Polling the video job failed.").slice(0, 240) };
+      console.error("[creative.video.poll.failed]", generation.id, lastPollError.code, lastPollError.message);
+      await this.repository.updateProject(generation.projectId, (project) => ({ ...project, generations: project.generations.map((item) => item.id === generation.id ? { ...item, lastPolledAt: iso(), lastPollError } : item), updatedAt: iso() }));
+    } finally { this.polling.delete(generation.id); }
   }
   private async persistCompletedOutput(generation: VideoGeneration) {
     const response = await this.video.downloadVideo(generation.upstreamJobId!, 0); const bytes = Buffer.from(await response.arrayBuffer()); if (!bytes.length || bytes.length > 250 * 1024 * 1024) throw new Error("Generated video content size is invalid.");

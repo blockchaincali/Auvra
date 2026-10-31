@@ -167,6 +167,8 @@ export interface VideoGeneration {
   outputAssetId?: string;
   outputStorageKey?: string;
   providerError?: { code: string; message: string };
+  /** Most recent non-terminal polling/download error, kept for diagnosis. */
+  lastPollError?: { code: string; message: string };
 }
 
 export interface CreativeEvent {

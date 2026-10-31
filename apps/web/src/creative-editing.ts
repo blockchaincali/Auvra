@@ -17,7 +17,12 @@ export const generationPollDelay = (project: Pick<CreativeProject, "generations"
 export const generationPreviewUrl = (project: Pick<CreativeProject, "id">, generation?: VideoGeneration): string | undefined => generation?.status === "completed" && generation.outputAssetId ? `/api/creative/projects/${encodeURIComponent(project.id)}/assets/${encodeURIComponent(generation.outputAssetId)}/content` : undefined;
 export const finalPreviewUrl = (project: Pick<CreativeProject, "id" | "outputAssetId">): string | undefined => project.outputAssetId ? `/api/creative/projects/${encodeURIComponent(project.id)}/assets/${encodeURIComponent(project.outputAssetId)}/content` : undefined;
 export const FINAL_RENDER_LABEL = "Render final video";
-export const safeGenerationError = (generation: VideoGeneration): string => generation.status === "failed" ? "The video could not be generated. Review the request and try again with a new approval." : generation.status === "expired" ? "Generation status expired without another paid submission." : generation.status === "cancelled" ? "Generation was cancelled." : "";
+export const safeGenerationError = (generation: VideoGeneration): string => {
+  const base = generation.status === "failed" ? "The video could not be generated. Review the request and try again with a new approval." : generation.status === "expired" ? "Generation status expired without another paid submission." : generation.status === "cancelled" ? "Generation was cancelled." : "";
+  // The server redacts credentials before storing provider errors; show the reason so failures are diagnosable.
+  const reason = generation.providerError ? `${generation.providerError.code}: ${generation.providerError.message}`.replace(/[\u0000-\u001f]/g, " ").slice(0, 280) : "";
+  return base && reason ? `${base} Reason — ${reason}` : base;
+};
 
 const defaultGenerativeReason = "Generated motion is explicitly enabled because cinematic movement adds value to this shot.";
 
