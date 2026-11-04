@@ -1,0 +1,38 @@
+{
+  "01": [
+    "setup/location-L1.png"
+  ],
+  "02": [
+    "setup/portrait-elara-maid.png",
+    "setup/location-L2.png"
+  ],
+  "03": [
+    "setup/portrait-seraphine.png",
+    "setup/portrait-elara-maid.png",
+    "setup/location-L2.png"
+  ],
+  "04": [
+    "setup/portrait-elara-maid.png",
+    "setup/portrait-seraphine.png",
+    "setup/location-L2.png"
+  ],
+  "04b": [
+    "setup/location-L2.png"
+  ],
+  "05": [
+    "setup/portrait-elara-maid.png",
+    "setup/location-L2.png"
+  ],
+  "06": [
+    "setup/portrait-seraphine.png",
+    "setup/location-L2.png"
+  ],
+  "07": [
+    "setup/portrait-cassian.png",
+    "setup/location-L2.png"
+  ],
+  "08": [
+    "setup/portrait-isolde.png",
+    "setup/location-L2.png"
+  ]
+}

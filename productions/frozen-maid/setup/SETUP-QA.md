@@ -1,10 +1,10 @@
 # The Frozen Maid Is the Ice Queen — Season 1 setup (Step 1)
 
-Status: **awaiting approval**. Nothing has been animated.
+Status: **approved** (Nov 4) after two redos: Cassian portrait and sheet, and L4 courtyard. Old versions are in `superseded/`.
 
 - Model: `google/gemini-nano-banana-2.1` via the Orbio `/images` endpoint
 - Images: 29 (10 portraits, 10 costume sheets, 9 location plates)
-- Provider-reported spend: **$1.09** of the $1.50 cap (about $0.037 per image), logged per image in `costs.jsonl`
+- Provider-reported spend: **$1.25** of the $1.50 cap including redos, logged per image in `costs.jsonl`
 - Prompts: `prompts/*.txt`, built by `../scripts/setup-prompts.mjs` with each locked description pasted word for word, plus the style line and negative list
 - Contact sheets: `contact/01-portraits.jpg`, `contact/02-costume-sheets.jpg`, `contact/03-locations.jpg`
 
@@ -36,3 +36,9 @@ The mirrored files replaced the originals. The originals are kept as `*-unmirror
 3. **L8 frozen lake:** the ruins read as frosted white with burnt black patches. If you want more charred black, redo it (about $0.04). The Ep 4 night-burning flashback will use this plate as a reference.
 
 Next step after approval: Episode 1 stills (8 images, about $0.30) as one numbered contact sheet, then animation, all within the $8 cap.
+
+## Redos after review
+
+- **Cassian portrait v3:** generated without a reference (the v1 reference kept carrying a faint scar low on the neck), with wording that places the scar along his LEFT jaw. The scar is now clearly visible on his left. The costume sheet was re-derived from it.
+- **L4 courtyard v2:** generated with L1 as the reference. It shows the same pale-stone Renaissance palace with copper-green domes, no battlements, and keeps the frozen fountain, torches and snow.
+- **L8:** kept as is.
