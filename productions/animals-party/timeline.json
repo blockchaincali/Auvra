@@ -1,0 +1,379 @@
+{
+ "scenes": [
+  {
+   "scene": "T",
+   "narration": "N0",
+   "start": 0.0,
+   "length": 8.456,
+   "narr_at": 1.0,
+   "narr_len": 5.955918,
+   "shots": [
+    {
+     "shot": "T",
+     "model": "kling",
+     "slot": 8.456,
+     "clip": 5,
+     "hold": 3.456,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "1",
+   "narration": "N1",
+   "start": 7.956,
+   "length": 18.927,
+   "narr_at": 8.456,
+   "narr_len": 16.927347,
+   "shots": [
+    {
+     "shot": "1a",
+     "model": "veo",
+     "slot": 8.927,
+     "clip": 8,
+     "hold": 0.927,
+     "trim": 0
+    },
+    {
+     "shot": "1b",
+     "model": "kling",
+     "slot": 10.0,
+     "clip": 10,
+     "hold": 0.0,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "2",
+   "narration": "N2",
+   "start": 26.383,
+   "length": 17.882,
+   "narr_at": 26.883,
+   "narr_len": 15.882449,
+   "shots": [
+    {
+     "shot": "2a",
+     "model": "kling",
+     "slot": 6.45,
+     "clip": 5,
+     "hold": 1.45,
+     "trim": 0
+    },
+    {
+     "shot": "2b",
+     "model": "kling",
+     "slot": 11.432,
+     "clip": 10,
+     "hold": 1.432,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "3",
+   "narration": "N3",
+   "start": 43.766,
+   "length": 22.114,
+   "narr_at": 44.266,
+   "narr_len": 20.114286,
+   "shots": [
+    {
+     "shot": "3a",
+     "model": "kling",
+     "slot": 14.9,
+     "clip": 10,
+     "hold": 4.9,
+     "trim": 0
+    },
+    {
+     "shot": "3b",
+     "model": "kling",
+     "slot": 7.214,
+     "clip": 5,
+     "hold": 2.214,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "4",
+   "narration": "N4",
+   "start": 65.38,
+   "length": 19.241,
+   "narr_at": 65.88,
+   "narr_len": 17.240816,
+   "shots": [
+    {
+     "shot": "4a",
+     "model": "kling",
+     "slot": 11.7,
+     "clip": 10,
+     "hold": 1.7,
+     "trim": 0
+    },
+    {
+     "shot": "4b",
+     "model": "kling",
+     "slot": 7.541,
+     "clip": 5,
+     "hold": 2.541,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "5",
+   "narration": "N5",
+   "start": 84.121,
+   "length": 18.274,
+   "narr_at": 84.621,
+   "narr_len": 16.274286,
+   "shots": [
+    {
+     "shot": "5a",
+     "model": "kling",
+     "slot": 10.35,
+     "clip": 10,
+     "hold": 0.35,
+     "trim": 0
+    },
+    {
+     "shot": "5b",
+     "model": "kling",
+     "slot": 7.924,
+     "clip": 5,
+     "hold": 2.924,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "6",
+   "narration": "N6",
+   "start": 101.895,
+   "length": 32.589,
+   "narr_at": 102.395,
+   "narr_len": 30.589388,
+   "shots": [
+    {
+     "shot": "6a",
+     "model": "kling",
+     "slot": 23.6,
+     "clip": 10,
+     "hold": 13.6,
+     "trim": 0
+    },
+    {
+     "shot": "6b",
+     "model": "kling",
+     "slot": 8.989,
+     "clip": 10,
+     "hold": 0.0,
+     "trim": 1.011
+    }
+   ]
+  },
+  {
+   "scene": "7",
+   "narration": "N7",
+   "start": 133.984,
+   "length": 18.666,
+   "narr_at": 134.484,
+   "narr_len": 16.666122,
+   "shots": [
+    {
+     "shot": "7a",
+     "model": "kling",
+     "slot": 5.25,
+     "clip": 5,
+     "hold": 0.25,
+     "trim": 0
+    },
+    {
+     "shot": "7b",
+     "model": "kling",
+     "slot": 13.416,
+     "clip": 10,
+     "hold": 3.416,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "8",
+   "narration": "N8",
+   "start": 152.151,
+   "length": 20.051,
+   "narr_at": 152.651,
+   "narr_len": 18.050612,
+   "shots": [
+    {
+     "shot": "8a",
+     "model": "kling",
+     "slot": 6.25,
+     "clip": 5,
+     "hold": 1.25,
+     "trim": 0
+    },
+    {
+     "shot": "8b",
+     "model": "kling",
+     "slot": 13.801,
+     "clip": 10,
+     "hold": 3.801,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "9",
+   "narration": "N9",
+   "start": 171.701,
+   "length": 18.509,
+   "narr_at": 172.201,
+   "narr_len": 16.509388,
+   "shots": [
+    {
+     "shot": "9a",
+     "model": "kling",
+     "slot": 6.5,
+     "clip": 5,
+     "hold": 1.5,
+     "trim": 0
+    },
+    {
+     "shot": "9b",
+     "model": "kling",
+     "slot": 12.009,
+     "clip": 10,
+     "hold": 2.009,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "10",
+   "narration": "N10",
+   "start": 189.711,
+   "length": 24.439,
+   "narr_at": 190.211,
+   "narr_len": 22.439184,
+   "shots": [
+    {
+     "shot": "10a",
+     "model": "kling",
+     "slot": 6.15,
+     "clip": 5,
+     "hold": 1.15,
+     "trim": 0
+    },
+    {
+     "shot": "10b",
+     "model": "kling",
+     "slot": 4.15,
+     "clip": 5,
+     "hold": 0.0,
+     "trim": 0.85
+    },
+    {
+     "shot": "10c",
+     "model": "kling",
+     "slot": 14.139,
+     "clip": 10,
+     "hold": 4.139,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "11",
+   "narration": "N11",
+   "start": 213.65,
+   "length": 27.469,
+   "narr_at": 214.15,
+   "narr_len": 25.469388,
+   "shots": [
+    {
+     "shot": "11a",
+     "model": "kling",
+     "slot": 18.2,
+     "clip": 10,
+     "hold": 8.2,
+     "trim": 0
+    },
+    {
+     "shot": "11b",
+     "model": "kling",
+     "slot": 9.269,
+     "clip": 10,
+     "hold": 0.0,
+     "trim": 0.731
+    }
+   ]
+  },
+  {
+   "scene": "12",
+   "narration": "N12",
+   "start": 240.619,
+   "length": 22.428,
+   "narr_at": 241.119,
+   "narr_len": 20.427755,
+   "shots": [
+    {
+     "shot": "12a",
+     "model": "kling",
+     "slot": 17.95,
+     "clip": 10,
+     "hold": 7.95,
+     "trim": 0
+    },
+    {
+     "shot": "12b",
+     "model": "veo",
+     "slot": 4.478,
+     "clip": 8,
+     "hold": 0.0,
+     "trim": 3.522
+    }
+   ]
+  },
+  {
+   "scene": "B",
+   "narration": "N13",
+   "start": 262.547,
+   "length": 15.871,
+   "narr_at": 263.047,
+   "narr_len": 13.87102,
+   "shots": [
+    {
+     "shot": "B",
+     "model": "page14",
+     "slot": 15.871,
+     "clip": 0,
+     "hold": 15.871,
+     "trim": 0
+    }
+   ]
+  },
+  {
+   "scene": "E",
+   "narration": "N14",
+   "start": 277.918,
+   "length": 7.067,
+   "narr_at": 278.918,
+   "narr_len": 1.567347,
+   "shots": [
+    {
+     "shot": "E",
+     "model": "kling",
+     "slot": 7.067,
+     "clip": 5,
+     "hold": 2.067,
+     "trim": 0
+    }
+   ]
+  }
+ ],
+ "total": 284.985
+}

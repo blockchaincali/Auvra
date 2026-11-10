@@ -1,0 +1,93 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Nunito ExtraLight,64,&H00DCF4FF,&H00DCF4FF,&H00101A2A,&H96000000,-1,0,0,0,100,100,0.5,0,1,4.5,2.5,2,120,120,64,1
+Style: Title,Fredoka Light,100,&H00293A5B,&H00293A5B,&H00E8F5FB,&H64000000,-1,0,0,0,100,100,1,0,1,9,4,5,40,40,40,1
+Style: Byline,Fredoka Light,46,&H00292A3B,&H00292A3B,&H00E8F5FB,&H64000000,-1,0,0,0,100,100,0.5,0,1,7,3,5,40,40,40,1
+Style: End,Dancing Script,190,&H0033B5F2,&H0033B5F2,&H00142440,&H78000000,-1,0,0,0,100,100,0,0,1,6,5,8,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:08.44,0:00:10.84,Cap,,0,0,0,,{\fad(120,120)}In the heart of the Whispering Forest,
+Dialogue: 0,0:00:10.84,0:00:15.84,Cap,,0,0,0,,{\fad(120,120)}a little mouse named {\c&H003DB8F5&}Milo{\c&H00DCF4FF&}\Nloved quiet nights like this.
+Dialogue: 0,0:00:15.84,0:00:22.94,Cap,,0,0,0,,{\fad(120,120)}The moon was full and bright, lighting up\Nthe trees, the flowers and the gentle stream.
+Dialogue: 0,0:00:22.94,0:00:25.96,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} took a deep breath and looked up.
+Dialogue: 0,0:00:26.86,0:00:30.06,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Rosie{\c&H00DCF4FF&} Rabbit bounced onto a mossy log.
+Dialogue: 0,0:00:30.06,0:00:33.06,Cap,,0,0,0,,{\fad(120,120)}“A moonlight party!” she cried.
+Dialogue: 0,0:00:33.06,0:00:39.26,Cap,,0,0,0,,{\fad(120,120)}She wrote invitations on green leaves\Nand hurried from burrow to nest to tree.
+Dialogue: 0,0:00:39.26,0:00:40.86,Cap,,0,0,0,,{\fad(120,120)}“Come one, come all!
+Dialogue: 0,0:00:40.86,0:00:43.28,Cap,,0,0,0,,{\fad(120,120)}There’s room for everyone!”
+Dialogue: 0,0:00:44.25,0:00:45.35,Cap,,0,0,0,,{\fad(120,120)}The next day,
+Dialogue: 0,0:00:45.35,0:00:51.75,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Rosie{\c&H00DCF4FF&} set out to invite all her woodland\Nfriends to the magical moonlight party.
+Dialogue: 0,0:00:51.75,0:00:58.95,Cap,,0,0,0,,{\fad(120,120)}She hopped from friend to friend, sharing\Na leaf-shaped invitation with a big smile.
+Dialogue: 0,0:00:58.95,0:01:00.75,Cap,,0,0,0,,{\fad(120,120)}Everyone was excited!
+Dialogue: 0,0:01:00.75,0:01:05.07,Cap,,0,0,0,,{\fad(120,120)}The forest was getting ready\Nfor a very special night.
+Dialogue: 0,0:01:05.76,0:01:10.96,Cap,,0,0,0,,{\fad(120,120)}As the sun began to set, the woodland\Nfriends arrived at the clearing.
+Dialogue: 0,0:01:10.96,0:01:17.36,Cap,,0,0,0,,{\fad(120,120)}They hung lanterns, tied flower garlands\Nand decorated the trees with glowing lights.
+Dialogue: 0,0:01:17.36,0:01:23.78,Cap,,0,0,0,,{\fad(120,120)}Everyone worked together to make the forest\Nlook magical for the moonlight party.
+Dialogue: 0,0:01:24.60,0:01:26.50,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Blink,{\c&H00DCF4FF&} {\c&H003DB8F5&}blink,{\c&H00DCF4FF&} {\c&H003DB8F5&}blink!{\c&H00DCF4FF&}
+Dialogue: 0,0:01:26.50,0:01:29.00,Cap,,0,0,0,,{\fad(120,120)}Fireflies flickered above the grass.
+Dialogue: 0,0:01:29.00,0:01:31.20,Cap,,0,0,0,,{\fad(120,120)}Crickets played their fiddles.
+Dialogue: 0,0:01:31.20,0:01:34.60,Cap,,0,0,0,,{\fad(120,120)}Frogs sang from their lily-pad stage.
+Dialogue: 0,0:01:34.60,0:01:38.70,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Tap-tap!{\c&H00DCF4FF&} {\c&H003DB8F5&}Hop-hop!{\c&H00DCF4FF&} {\c&H003DB8F5&}Swish-swish!{\c&H00DCF4FF&}
+Dialogue: 0,0:01:38.70,0:01:41.52,Cap,,0,0,0,,{\fad(120,120)}The moonlight party had begun.
+Dialogue: 0,0:01:42.47,0:01:45.88,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} was so happy to see everyone dancing.
+Dialogue: 0,0:01:45.87,0:01:54.08,Cap,,0,0,0,,{\fad(120,120)}He hopped into the circle too, but the bigger\Nanimals moved so fast and made such big steps!
+Dialogue: 0,0:01:54.07,0:02:01.17,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} tried his best to keep up, but it felt\Na little too loud and a little too big.
+Dialogue: 0,0:02:01.17,0:02:05.97,Cap,,0,0,0,,{\fad(120,120)}He stepped back and watched\Nfor a moment, feeling shy.
+Dialogue: 0,0:02:05.97,0:02:07.07,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}THUMP!{\c&H00DCF4FF&}
+Dialogue: 0,0:02:07.07,0:02:10.28,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Bear’s{\c&H00DCF4FF&} big paw landed nearby.
+Dialogue: 0,0:02:10.27,0:02:13.59,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} scurried back beside the mushrooms.
+Dialogue: 0,0:02:14.46,0:02:19.46,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} sat quietly by the mushrooms,\Nwatching everyone dance.
+Dialogue: 0,0:02:19.46,0:02:24.36,Cap,,0,0,0,,{\fad(120,120)}The music was so loud and\Nthe steps were so big.
+Dialogue: 0,0:02:24.36,0:02:26.36,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} felt small.
+Dialogue: 0,0:02:26.36,0:02:31.78,Cap,,0,0,0,,{\fad(120,120)}But even though he felt shy, he\Nstill loved seeing his friends happy.
+Dialogue: 0,0:02:32.63,0:02:35.53,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Big{\c&H00DCF4FF&} {\c&H003DB8F5&}Brown{\c&H00DCF4FF&} {\c&H003DB8F5&}Bear{\c&H00DCF4FF&} noticed him.
+Dialogue: 0,0:02:35.53,0:02:38.73,Cap,,0,0,0,,{\fad(120,120)}“Would you like to dance?” he asked.
+Dialogue: 0,0:02:38.73,0:02:41.53,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} stared at the crowded clearing.
+Dialogue: 0,0:02:41.53,0:02:44.33,Cap,,0,0,0,,{\fad(120,120)}“I can’t make a big enough step.”
+Dialogue: 0,0:02:44.33,0:02:47.73,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Bear{\c&H00DCF4FF&} sat down until they were eye to eye.
+Dialogue: 0,0:02:47.73,0:02:51.25,Cap,,0,0,0,,{\fad(120,120)}“Who says dancing has to be big?”
+Dialogue: 0,0:02:52.28,0:02:55.18,Cap,,0,0,0,,{\fad(120,120)}“Let’s make room!” called {\c&H003DB8F5&}Rosie.{\c&H00DCF4FF&}
+Dialogue: 0,0:02:55.18,0:02:58.48,Cap,,0,0,0,,{\fad(120,120)}The friends stepped back to form a circle.
+Dialogue: 0,0:02:58.48,0:03:00.58,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo’s{\c&H00DCF4FF&} whiskers twitched.
+Dialogue: 0,0:03:00.58,0:03:04.58,Cap,,0,0,0,,{\fad(120,120)}Then he scampered into the\Nmiddle, tapping his acorn cap.
+Dialogue: 0,0:03:04.58,0:03:07.68,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Tick-tick.{\c&H00DCF4FF&} {\c&H003DB8F5&}Tiptoe!{\c&H00DCF4FF&} {\c&H003DB8F5&}Tick-tick.{\c&H00DCF4FF&}
+Dialogue: 0,0:03:07.68,0:03:09.20,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Tiptoe!{\c&H00DCF4FF&}
+Dialogue: 0,0:03:10.19,0:03:13.69,Cap,,0,0,0,,{\fad(120,120)}Soon, other animals heard the tiny beat.
+Dialogue: 0,0:03:13.69,0:03:16.09,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Tap.{\c&H00DCF4FF&} {\c&H003DB8F5&}Tap-tap.{\c&H00DCF4FF&}
+Dialogue: 0,0:03:16.09,0:03:17.99,Cap,,0,0,0,,{\fad(120,120)}A little rabbit clapped.
+Dialogue: 0,0:03:17.99,0:03:20.09,Cap,,0,0,0,,{\fad(120,120)}A squirrel shook some leaves.
+Dialogue: 0,0:03:20.09,0:03:23.09,Cap,,0,0,0,,{\fad(120,120)}The frogs made a soft drum.
+Dialogue: 0,0:03:23.09,0:03:27.09,Cap,,0,0,0,,{\fad(120,120)}Together, their small\Nsounds filled the clearing.
+Dialogue: 0,0:03:27.09,0:03:28.79,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} smiled.
+Dialogue: 0,0:03:28.79,0:03:33.21,Cap,,0,0,0,,{\fad(120,120)}His tiny beat was a big\Npart of the party after all!
+Dialogue: 0,0:03:34.23,0:03:37.03,Cap,,0,0,0,,{\fad(120,120)}Soon the whole forest joined in.
+Dialogue: 0,0:03:37.03,0:03:40.83,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Big{\c&H00DCF4FF&} {\c&H003DB8F5&}Brown{\c&H00DCF4FF&} {\c&H003DB8F5&}Bear{\c&H00DCF4FF&} danced with gentle steps.
+Dialogue: 0,0:03:40.83,0:03:43.53,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Rosie{\c&H00DCF4FF&} twirled beside {\c&H003DB8F5&}Milo.{\c&H00DCF4FF&}
+Dialogue: 0,0:03:43.53,0:03:45.03,Cap,,0,0,0,,{\fad(120,120)}The rabbits hopped.
+Dialogue: 0,0:03:45.03,0:03:46.93,Cap,,0,0,0,,{\fad(120,120)}The foxes spun.
+Dialogue: 0,0:03:46.93,0:03:49.03,Cap,,0,0,0,,{\fad(120,120)}The hedgehog clapped.
+Dialogue: 0,0:03:49.03,0:03:52.13,Cap,,0,0,0,,{\fad(120,120)}Even the frogs kept the beat on their drums.
+Dialogue: 0,0:03:52.13,0:03:56.73,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo’s{\c&H00DCF4FF&} tiny rhythm had\Nbrought everyone together.
+Dialogue: 0,0:03:56.73,0:04:00.25,Cap,,0,0,0,,{\fad(120,120)}A moonlight party for all!
+Dialogue: 0,0:04:01.10,0:04:05.70,Cap,,0,0,0,,{\fad(120,120)}The moon began to sink, and\Nthe party came to an end.
+Dialogue: 0,0:04:05.70,0:04:08.40,Cap,,0,0,0,,{\fad(120,120)}Everyone gathered around {\c&H003DB8F5&}Milo.{\c&H00DCF4FF&}
+Dialogue: 0,0:04:08.40,0:04:11.00,Cap,,0,0,0,,{\fad(120,120)}“Thank you for the dance!” they said.
+Dialogue: 0,0:04:11.00,0:04:15.20,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} smiled, feeling warm and happy inside.
+Dialogue: 0,0:04:15.20,0:04:18.80,Cap,,0,0,0,,{\fad(120,120)}Even a small mouse can make a big, happy day.
+Dialogue: 0,0:04:18.80,0:04:22.22,Cap,,0,0,0,,{\fad(120,120)}And the forest felt a little brighter.
+Dialogue: 0,0:04:23.03,0:04:25.63,Cap,,0,0,0,,{\fad(120,120)}Let’s talk about the story.
+Dialogue: 0,0:04:25.63,0:04:29.23,Cap,,0,0,0,,{\fad(120,120)}Why did {\c&H003DB8F5&}Milo{\c&H00DCF4FF&} feel left out at the party?
+Dialogue: 0,0:04:29.23,0:04:32.33,Cap,,0,0,0,,{\fad(120,120)}What did {\c&H003DB8F5&}Bear{\c&H00DCF4FF&} do to help {\c&H003DB8F5&}Milo?{\c&H00DCF4FF&}
+Dialogue: 0,0:04:32.33,0:04:37.55,Cap,,0,0,0,,{\fad(120,120)}How can you make room for\Nsomeone who feels small or shy?
+Dialogue: 0,0:04:38.90,0:04:40.92,Cap,,0,0,0,,{\fad(120,120)}The End.
+Dialogue: 1,0:00:00.40,0:00:08.16,Title,,0,0,0,,{\an5\pos(1400,440)\fad(700,500)}{\c&H00293A5B&\fs92}The Night the\N{\c&H00174CD9&\fs150}Animals\N{\c&H00266437&\fs112}Held the\N{\c&H00043686&\fs150}Party
+Dialogue: 1,0:00:02.00,0:00:08.16,Byline,,0,0,0,,{\an5\pos(1400,880)\fad(600,500)}Written by\N{\fs64}Chinwendu Blessing
+Dialogue: 1,0:04:38.72,0:04:44.99,End,,0,0,0,,{\an8\pos(960,120)\fad(800,0)}The End

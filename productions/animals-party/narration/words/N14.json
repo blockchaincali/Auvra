@@ -1,0 +1,1 @@
+{"text":"The End.","usage":{"total_tokens":42,"input_tokens":39,"output_tokens":3,"cost":0.000114},"task":"transcribe","segments":[{"id":0,"start":0,"end":1.3,"text":"The End."}],"words":[{"word":"The","start":0.1,"end":0.4},{"word":"End.","start":0.9,"end":1.3}]}
