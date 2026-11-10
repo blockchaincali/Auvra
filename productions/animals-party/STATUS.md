@@ -1,39 +1,36 @@
 # The Night the Animals Held the Party: status
 
-**At the route choice (Nov 10):** the plates and voice are approved, narration N0–N14 is generated, and the 1b A/B test is done. Nothing else has been animated. The next step is the user's choice of route (all Kling or hybrid).
+**Delivered (Nov 10):** `export/the-night-the-animals-held-the-party.mp4`. It is 1920×1080, 24 fps, H.264 High + AAC 48 kHz stereo, 4:45, −14.1 LUFS integrated, peak −1.4 dBFS. The 317 MB master is over GitHub's 100 MB limit, so it is not in git; it was sent to the user directly. `export/…-review.mp4` (93 MB, 2.45 Mb/s) is the copy in the repo.
 
-## Spend so far: about $4.73 of the $45 cap
+## Spend: about $37.74 of the $45 cap (Orbio balance about $133.15 → $95.41)
 
-| Item | Cost | Source |
-| --- | --- | --- |
-| 27 clean plates (26 by Nano Banana, including failed calls and the 12b remake; 3b cropped directly for free) | $1.03 | provider-reported |
-| Narration N0–N14 (ElevenLabs eleven-v3, 3,530 chars) | about $1.60 | balance drop; about 5–6× the catalogue list price of $0.00008/char |
-| A/B 1b: Kling 3.0 Pro 10 s | $1.68 | provider-reported ($0.168/s) |
-| A/B 1b: Veo 3.1 Lite 720p 8 s | $0.40 | provider-reported ($0.05/s) |
-| Transcription QA (gpt-4o-mini-transcribe) and key test | about $0.02 | |
+| Item | Cost |
+| --- | --- |
+| Plates (Nano Banana; 3b cropped directly for free) | $1.03 |
+| Narration N0–N14 (ElevenLabs eleven-v3, Lily) | about $1.60 |
+| A/B test on 1b (Kling 10 s $1.68, used in the film; Veo Lite 8 s $0.40) | $2.08 |
+| Animation: 24 Kling 3.0 Pro shots (185 s at $0.168/s) | $31.08 |
+| Kling re-runs: 3b ($0.84), 6a ($1.68) | $2.52 |
+| Veo 3.1 Lite 720p: 1a, 12b | $0.80 |
+| Transcription QA, word timestamps, key test | about $0.05 |
 
-Orbio balance after all of this: $128.43.
+## How it was cut
 
-## Plates (`plates/`, `contact-sheet.jpg`): approved
+- Route: all Kling for character shots, as in the plan's table. The two scenery-only shots (1a, 12b) use Veo Lite.
+- Timing: `scripts/plan-timeline.py` → `timeline.json` / `timeline-table.md`. Each shot starts on the narration word its picture matches (for example, 6b on "THUMP!"). A shot gets a 10 s clip if its slot is at least 8.5 s, otherwise 5 s. Spare time (71 s in total) is a hold on the clip's first frame (the clean plate), with a slow push-in that runs through the motion without a visible join. The voice is never sped up.
+- Narration runs at its natural pace: 0.5 s lead, 1.5 s between lines, 0.5 s dissolves between scenes.
+- Captions (`scripts/build-captions.py` → `edit/captions.ass`): the book text, sentence by sentence, Nunito Bold in cream with a dark outline, in the bottom fifth, at most two lines (46 characters each). Milo, Rosie, Bear, Big Brown Bear and the sound words are in gold. Times come from Gemini word timestamps, checked against the audio pauses to within about 0.3 s. There are no captions on the title (title card), the bonus page (its text is on the page) or The End.
+- Title card: Fredoka in the cover's colours (brown, orange "Animals", green "Held the"), with a cream outline. End card: "The End" in gold Dancing Script. Fonts are in `fonts/` (OFL, from @fontsource).
+- Bonus: a free ease-in-out pan across page 14, from "Let's Talk" to "Let's Play".
+- Mix (`scripts/assemble.py`): narration at −16 LUFS, ambient at −34 LUFS (18 dB under), final two-pass loudnorm to −14 LUFS / −1.5 dBTP, with fades from and to black.
 
-- **3b** was blocked twice by Gemini moderation (`PROHIBITED_CONTENT`), so it is a direct 16:9 crop of page 4 with no model (`crops-direct.tsv`). The fold and book edge are out of frame and the crop has no text.
-- **12b** was remade from a tighter crop (`13 805 8 974 250`) with one extra prompt sentence (`prompts/plate-12b.txt`): moon, lake and trees only, no animals.
+## QA notes
 
-## Narration (`narration/`): generated, verified
+- Every clip was checked frame by frame against the book designs (`scripts/qa-strips.sh`).
+- **3b v1** was rejected because the fawn and squirrel lost their shapes. **6a v1** was rejected because the fawn grew antlers. Each was re-run once with a design-lock sentence and passed. The rejected clips are in `clips/rejected/`.
+- Voice check (`logs/audio-voice-check.txt`): 2a, 3a, 8b and E had short voice-like sounds in Kling's audio. Their ambient was replaced with clean ambient from a neighbouring clip (2b, 3b, 8a, 1b; `AMB_OVERRIDE` in `assemble.py`). No Kling audio with voices is in the mix.
+- Known softness: Bear's spin in 6a and Rosie's twirl in 11b blur a little mid-motion. Every character stays on model.
 
-- Approved settings for every line: `elevenlabs/eleven-v3`, voice `Lily`, the plan's style instruction, and the text prefixed with `[warm, gentle]` (`scripts/tts.mjs`). N0 is the approved test, with an extra `[softly]` before "Written by".
-- QA (`narration/qa-transcripts.tsv`): every line was transcribed. No tag is spoken, and every line matches the script word for word.
-- Lengths (s): N0 5.96 · N1 16.93 · N2 15.88 · N3 20.11 · N4 17.24 · N5 16.27 · N6 30.59 · N7 16.67 · N8 18.05 · N9 16.51 · N10 22.44 · N11 25.47 · N12 20.43 · N13 13.87 · N14 1.57.
-- **Total 258 s (4:18) before pauses**, against the plan's 2:50–3:10 estimate. The reading pace is about 105 wpm. With 0.6 s sentence pauses and 1.5 s scene gaps the film runs about 4:40, so the picture has to cover more time than the 27 planned shot lengths (about 3:15).
+## Rebuild
 
-## A/B test, shot 1b (`ab/`)
-
-- `ab/1b-AB-side-by-side.mp4`: A is Kling (left ear), B is Veo Lite (right ear).
-- Kling: stays on model (face, ears and fur match the plate); breath and head lift as prompted; 1936×1080; very quiet ambient audio, no voices.
-- Veo Lite: Milo turns to face the camera and his face changes (smaller eyes, rounder head). Two large glowing firefly blobs appear by the tree. 1280×720; ambient audio, no voices.
-- By the plan's rule ("if it drifts, use all Kling"), this points to **all Kling**.
-
-## Next, after the route choice
-
-1. Re-time the shot list to the measured narration (extend holds or slow clips in the edit, or make some shots 10 s).
-2. Animate all shots, then edit with captions and title cards, and export.
+`python3 scripts/assemble.py all` (needs `source/` rendered from the PDF, plus the clips in `clips/`).

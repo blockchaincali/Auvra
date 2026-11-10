@@ -9,6 +9,8 @@ import json, math, os, subprocess, sys
 os.chdir(os.path.join(os.path.dirname(__file__), ".."))
 TL = json.load(open("timeline.json")); FPS = 24; XF = 0.5
 AMB_LUFS, NARR_LUFS, FINAL_LUFS = -34.0, -16.0, -14.0
+# Clips whose own soundtrack has voice-like sounds (logs/audio-voice-check.txt): use a clean neighbouring clip's ambient instead.
+AMB_OVERRIDE = {"2a": "clips/2b.mp4", "3a": "clips/3b.mp4", "8b": "clips/8a.mp4", "E": "clips/1b.mp4"}
 def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: print(" ".join(cmd)[:600], "\n", r.stderr[-1500:]); sys.exit(1)
@@ -42,7 +44,7 @@ def make_shot(s):
                    f":d=1:s=1920x1080:fps={FPS}")
         vf += ",format=yuv420p"
         run(["ffmpeg","-y","-v","error","-i",clip,"-vf",vf,"-an","-c:v","libx264","-crf","14","-preset","fast",vout])
-        amb_src, hold_a = clip, hold
+        amb_src, hold_a = (AMB_OVERRIDE[sid], slot) if sid in AMB_OVERRIDE else (clip, hold)
     # ambient: [filler from the clip's own start, looped, for the hold] + [clip audio], trimmed to the slot
     tmp = f"edit/shots/{sid}.raw.wav"
     if not has_audio(amb_src):

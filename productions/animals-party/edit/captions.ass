@@ -83,10 +83,6 @@ Dialogue: 0,0:04:08.40,0:04:11.00,Cap,,0,0,0,,{\fad(120,120)}“Thank you for th
 Dialogue: 0,0:04:11.00,0:04:15.20,Cap,,0,0,0,,{\fad(120,120)}{\c&H003DB8F5&}Milo{\c&H00DCF4FF&} smiled, feeling warm and happy inside.
 Dialogue: 0,0:04:15.20,0:04:18.80,Cap,,0,0,0,,{\fad(120,120)}Even a small mouse can make a big, happy day.
 Dialogue: 0,0:04:18.80,0:04:22.22,Cap,,0,0,0,,{\fad(120,120)}And the forest felt a little brighter.
-Dialogue: 0,0:04:23.03,0:04:25.63,Cap,,0,0,0,,{\fad(120,120)}Let’s talk about the story.
-Dialogue: 0,0:04:25.63,0:04:29.23,Cap,,0,0,0,,{\fad(120,120)}Why did {\c&H003DB8F5&}Milo{\c&H00DCF4FF&} feel left out at the party?
-Dialogue: 0,0:04:29.23,0:04:32.33,Cap,,0,0,0,,{\fad(120,120)}What did {\c&H003DB8F5&}Bear{\c&H00DCF4FF&} do to help {\c&H003DB8F5&}Milo?{\c&H00DCF4FF&}
-Dialogue: 0,0:04:32.33,0:04:37.55,Cap,,0,0,0,,{\fad(120,120)}How can you make room for\Nsomeone who feels small or shy?
 Dialogue: 0,0:04:38.90,0:04:40.92,Cap,,0,0,0,,{\fad(120,120)}The End.
 Dialogue: 1,0:00:00.40,0:00:08.16,Title,,0,0,0,,{\an5\pos(1400,440)\fad(700,500)}{\c&H00293A5B&\fs92}The Night the\N{\c&H00174CD9&\fs150}Animals\N{\c&H00266437&\fs112}Held the\N{\c&H00043686&\fs150}Party
 Dialogue: 1,0:00:02.00,0:00:08.16,Byline,,0,0,0,,{\an5\pos(1400,880)\fad(600,500)}Written by\N{\fs64}Chinwendu Blessing

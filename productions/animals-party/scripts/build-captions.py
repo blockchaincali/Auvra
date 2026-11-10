@@ -55,7 +55,7 @@ def styled(w): return "{\\c" + GOLDC + "&}" + w + "{\\c" + CREAM + "&}" if GOLD.
 ev = []
 for sc in TL["scenes"]:
     nid = sc["narration"]
-    if nid not in script: continue          # N0 title, N13 bonus page, N14 end card: no captions
+    if nid not in script or nid == "N13": continue   # N0 title, N13 bonus page (its text is on the page), N14 end card: no captions
     toks, st, en = token_times(nid, script[nid]); base = sc["narr_at"]
     cs = chunks(toks)
     for j, c in enumerate(cs):
