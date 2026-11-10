@@ -1,24 +1,39 @@
 # The Night the Animals Held the Party: status
 
-**At approval gate 1 (Nov 10):** 26 of 27 plates are made (`plates/`, `contact-sheet.jpg`), and the N0 voice test is done (`narration/N0-test.mp3`). Nothing is animated. Spend so far is about **$1.00** (plates $0.996 including failed calls, voice about $0.007, key test $0.000002).
+**At the route choice (Nov 10):** the plates and voice are approved, narration N0–N14 is generated, and the 1b A/B test is done. Nothing else has been animated. The next step is the user's choice of route (all Kling or hybrid).
 
-Open items for the user:
-- **3b** is blocked by Gemini moderation (`PROHIBITED_CONTENT`) on two tries. The crop has no text, so the likely cause is the fawn looking like a famous film character. Options: (a) crop locally to 16:9 with no model, (b) retry with a reworded prompt, or (c) drop 3b and hold 3a longer.
-- **12b** is meant to be scenery-only (Veo), but the plate shows the back of a fawn at the bottom. Remake it with a tighter crop, or approve it as it is.
-- The voice is ElevenLabs `eleven-v3`, voice **Lily** (British female), with the style instruction from the plan. The line runs 5.96 s.
-- `/images` checks the request body before the key, so a malformed request returns 400 even with a bad key. Test the key with a real call.
+## Spend so far: about $4.73 of the $45 cap
 
-## Done
+| Item | Cost | Source |
+| --- | --- | --- |
+| 27 clean plates (26 by Nano Banana, including failed calls and the 12b remake; 3b cropped directly for free) | $1.03 | provider-reported |
+| Narration N0–N14 (ElevenLabs eleven-v3, 3,530 chars) | about $1.60 | balance drop; about 5–6× the catalogue list price of $0.00008/char |
+| A/B 1b: Kling 3.0 Pro 10 s | $1.68 | provider-reported ($0.168/s) |
+| A/B 1b: Veo 3.1 Lite 720p 8 s | $0.40 | provider-reported ($0.05/s) |
+| Transcription QA (gpt-4o-mini-transcribe) and key test | about $0.02 | |
 
-- The PDF is rendered at 300 dpi (`source/`, gitignored; regenerate with `pdftoppm -r 300 -png <pdf> source/page`).
-- All 27 shot crops are defined in `crops.tsv`, as coordinates on a 1000-px-wide preview of each spread, scaled ×4.132. Each one was checked visually:
-  - **E** starts right of the author's photo on page 15, so the photo is never sent to a model.
-  - **10b** is tightened onto the rabbit and squirrel, so the text panel doesn't dominate.
-  - **12b** is trimmed so that no animal enters the scenery-only Veo shot.
-- `scripts/make-plates.sh` crops each region and sends it to Nano Banana 2.1 (`/images`, 16:9) with the plan's instruction word for word, plus one sentence: "Also remove the edges of the open book and the centre fold line, so the picture is one continuous painting." The spreads are photographed inside an open-book mockup, so without that sentence the border and fold would survive.
+Orbio balance after all of this: $128.43.
 
-## Next, after approval
+## Plates (`plates/`, `contact-sheet.jpg`): approved
 
-1. Resolve 3b and 12b, then get the contact sheet approved.
-2. Get the N0 voice approved, then generate N1–N14.
-3. A/B test on shot 1b (Kling 10s vs Veo Lite 8s, about $3).
+- **3b** was blocked twice by Gemini moderation (`PROHIBITED_CONTENT`), so it is a direct 16:9 crop of page 4 with no model (`crops-direct.tsv`). The fold and book edge are out of frame and the crop has no text.
+- **12b** was remade from a tighter crop (`13 805 8 974 250`) with one extra prompt sentence (`prompts/plate-12b.txt`): moon, lake and trees only, no animals.
+
+## Narration (`narration/`): generated, verified
+
+- Approved settings for every line: `elevenlabs/eleven-v3`, voice `Lily`, the plan's style instruction, and the text prefixed with `[warm, gentle]` (`scripts/tts.mjs`). N0 is the approved test, with an extra `[softly]` before "Written by".
+- QA (`narration/qa-transcripts.tsv`): every line was transcribed. No tag is spoken, and every line matches the script word for word.
+- Lengths (s): N0 5.96 · N1 16.93 · N2 15.88 · N3 20.11 · N4 17.24 · N5 16.27 · N6 30.59 · N7 16.67 · N8 18.05 · N9 16.51 · N10 22.44 · N11 25.47 · N12 20.43 · N13 13.87 · N14 1.57.
+- **Total 258 s (4:18) before pauses**, against the plan's 2:50–3:10 estimate. The reading pace is about 105 wpm. With 0.6 s sentence pauses and 1.5 s scene gaps the film runs about 4:40, so the picture has to cover more time than the 27 planned shot lengths (about 3:15).
+
+## A/B test, shot 1b (`ab/`)
+
+- `ab/1b-AB-side-by-side.mp4`: A is Kling (left ear), B is Veo Lite (right ear).
+- Kling: stays on model (face, ears and fur match the plate); breath and head lift as prompted; 1936×1080; very quiet ambient audio, no voices.
+- Veo Lite: Milo turns to face the camera and his face changes (smaller eyes, rounder head). Two large glowing firefly blobs appear by the tree. 1280×720; ambient audio, no voices.
+- By the plan's rule ("if it drifts, use all Kling"), this points to **all Kling**.
+
+## Next, after the route choice
+
+1. Re-time the shot list to the measured narration (extend holds or slow clips in the edit, or make some shots 10 s).
+2. Animate all shots, then edit with captions and title cards, and export.

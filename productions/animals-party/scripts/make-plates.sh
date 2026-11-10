@@ -12,7 +12,8 @@ while IFS=$'\t' read -r id pg x0 y0 x1 y1; do
   [[ -f plates/plate-$id.png ]] && continue
   g=$(awk "BEGIN{printf \"%dx%d+%d+%d\", ($x1-$x0)*4.132, ($y1-$y0)*4.132, $x0*4.132, $y0*4.132}")
   convert source/page-$pg.png -crop $g +repage -resize '2400x2400>' -quality 92 crops/crop-$id.jpg
-  node scripts/gen-image.mjs plates/plate-$id.png 16:9 prompts/plate.txt crops/crop-$id.jpg >> costs-plates.jsonl || echo "FAIL $id" &
+  pf=prompts/plate.txt; [[ -f prompts/plate-$id.txt ]] && pf=prompts/plate-$id.txt
+  node scripts/gen-image.mjs plates/plate-$id.png 16:9 $pf crops/crop-$id.jpg >> costs-plates.jsonl || echo "FAIL $id" &
   while (( $(jobs -r | wc -l) >= 9 )); do sleep 1; done
 done < crops.tsv
 wait

@@ -1,0 +1,2 @@
+Remove all text and the dark text panel. Repaint that area as a seamless continuation of the same painting, same style, same lighting. Output 16:9. Do not change any character. Also remove the edges of the open book and the centre fold line, so the picture is one continuous painting.
+Show only the moon, the lake and the trees: no animals, insects or characters anywhere in the picture.
