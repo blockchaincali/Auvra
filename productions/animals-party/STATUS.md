@@ -1,6 +1,8 @@
 # The Night the Animals Held the Party: status
 
-**Blocked (Nov 10):** every Orbio request returns `401 invalid_api_key` ("This Orbio API key is unknown or has been revoked"). This happens with the environment's `ORBIO_API_KEY` and with the network-secret key saved on Nov 10. No paid call has gone through, so the spend is **$0.00**.
+**Blocked (Nov 10, later):** the new Orbio key works (a 1-token chat call returned 200 and cost $0.000002). But the source PDF is not in this container, because `source/` is gitignored and the PDF was never committed. A new session needs the PDF uploaded again, then `pdftoppm -r 300 -png <pdf> source/page`. Spend so far: **$0.000002**.
+
+Note: `/images` checks the request body before the key, so a malformed request returns 400 even with a bad key. Test the key with a real call.
 
 ## Done
 
